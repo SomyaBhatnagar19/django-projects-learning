@@ -12,11 +12,12 @@ articles = {
     'politics':'Politics Page'
 }
 
-def sports_view(request):
-    return HttpResponse(articles['sports'])
+# dynamically updating the views
 
-def finance_view(request):
-    return HttpResponse(articles['finance'])
+def news_view(request,topic): # topic -> dynamic variable
+    return HttpResponse(articles[topic])
 
-def politics_view(request):
-    return HttpResponse(articles['politics'])
+def add_view(request,num1,num2):
+    add_result = num1 + num2
+    result = f"{num1}+{num2} = {add_result}"
+    return HttpResponse(result)
