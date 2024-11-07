@@ -4,8 +4,19 @@ from django.http import HttpResponse
 
 # creating an online newspaper thing
 
+#using a dictionary python object
+
+articles = {
+    'sports':'Sports Page',
+    'finance':'Finance Page',
+    'politics':'Politics Page'
+}
+
 def sports_view(request):
-    return HttpResponse("Sports Page")
+    return HttpResponse(articles['sports'])
 
 def finance_view(request):
-    return HttpResponse("Finance Page")
+    return HttpResponse(articles['finance'])
+
+def politics_view(request):
+    return HttpResponse(articles['politics'])
