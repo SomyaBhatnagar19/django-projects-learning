@@ -1,0 +1,14 @@
+# Ignore the virtual environment and Python cache
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Pipenv files lock file if you don't want to track it
+Pipfile.lock
+
+# Ignore Django migrations
+*/migrations/
+
+# Ignore database files
+*.sqlite3
